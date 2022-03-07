@@ -1,5 +1,3 @@
 # JANELLE DOMANTAY
 
-Basic Website
-
-![Profile Picture](Images/Profile.jpg)
+<img src="Images/Profile.jpg" alt="profilePicture" width="350"/>
