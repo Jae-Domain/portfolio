@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nano Folio - Simple HTML Template</title>
+	<link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+	<link href="css/magnific-popup.min.css" rel="stylesheet">
+	<link href="css/tooplate-style.css" rel="stylesheet">
+	<!--
+
+	Tooplate 2122 Nano Folio
+
+	https://www.tooplate.com/view/2122-nano-folio
+
+	-->
+</head>
+<body>
+	<div class="tm-container-fluid">
+		<section class="tm-site-header tm-flex-center tm-mb-50 tm-bgcolor-1 tm-border-rounded">
+			<i class="fas fa-heart fa-3x"></i>
+			<h1>Education</h1>
+			<p>Aug 2017 - Dec 2021	</p>
+			<p style="font-size:smaller"
+				<br /> B.S. in Computer Science, Math Minor <br /> University of Nevada, Las Vegas
+				<br /> Summa Cum Laude, Honors College, Dean’s List
+				<br /> Thesis:  How Facial Features Convey Attention in Stationary
+				Environments
+			</p>
+			<h2>Research Experience</h2>
+			<h3>Presentations</h3>
+			<h4>Teaching Experience</h4>
+			<h5>Honors and Awards</h5>
+
+		</section>
+
+		<footer class="tm-footer">
+			Copyright 2020 Nano Folio - Design: <a rel="sponsored" href="https://www.tooplate.com" class="tm-link-gray">Tooplate</a>
+		</footer>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/isotope.pkgd.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script>
+		$(function () {
+			// Init the image gallery
+			var $gallery = $(".tm-gallery").isotope({
+				itemSelector: ".tm-gallery-item",
+				layoutMode: "fitRows"
+			});
+
+			// Layout Isotope after each image loads
+			$gallery.imagesLoaded().progress(function () {
+				$gallery.isotope("layout");
+			});
+
+			$(".filters-button-group").on("click", "a", function (e) {
+				e.preventDefault();
+				var filterValue = $(this).attr("data-filter");
+				$gallery.isotope({ filter: filterValue });
+				$('.filters-button-group a').removeClass('active');
+				$(this).addClass('active');
+			});
+
+			// Magnific Pop up
+			$('.tm-gallery').magnificPopup({
+				delegate: 'a',
+				type: 'image',
+				gallery: { enabled: true }
+			});
+		});
+	</script>
+</body>
+</html>
