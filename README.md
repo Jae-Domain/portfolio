@@ -2,4 +2,4 @@
 
 Basic Website
 
-[Profile Picture](Images/Profile.jpg)
+![Profile Picture](Images/Profile.jpg)
